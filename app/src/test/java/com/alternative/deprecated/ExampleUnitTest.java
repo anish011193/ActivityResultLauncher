@@ -1,4 +1,4 @@
-package com.example.activityresultlauncher;
+package com.alternative.deprecated;
 
 import org.junit.Test;
 

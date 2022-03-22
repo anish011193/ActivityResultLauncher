@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.activityresultlauncher">
+    package="com.alternative.deprecated">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ActivityResultLauncher">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.alternative.deprecated.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SomeActivity"
+        <activity android:name="com.alternative.deprecated.SomeActivity"
             android:exported="true"/>
     </application>
 
