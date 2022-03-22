@@ -72,9 +72,9 @@ public class FirstActivity extends AppCompatActivity {
 
     public void openSomeActivityForResult() {
         Intent intent = new Intent(this, SecondActivity.class);
-        if (Constant.showDeprecated) {
+        if (Constant.showDeprecated) { // OLD WAY
             startActivityForResult(intent, 123);
-        } else {
+        } else { // NEW WAY
             someActivityResultLauncher.launch(intent);
         }
     }

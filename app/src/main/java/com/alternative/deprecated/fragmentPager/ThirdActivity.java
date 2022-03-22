@@ -38,7 +38,7 @@ public class ThirdActivity extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewPager2);
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
-        if(Constant.showDeprecated) {
+        if(Constant.showDeprecated) { // OLD Way
             viewPager2.setVisibility(View.GONE);
             viewPager.setVisibility(View.VISIBLE);
 
@@ -66,7 +66,7 @@ public class ThirdActivity extends AppCompatActivity {
                 }
             });
 
-        } else {
+        } else { // NEW WAY
             viewPager2.setVisibility(View.VISIBLE);
             viewPager.setVisibility(View.GONE);
             viewStateAdapter = new ViewStateAdapter(this);
@@ -76,7 +76,7 @@ public class ThirdActivity extends AppCompatActivity {
 
     }
 
-    public class ViewStateAdapter extends FragmentStateAdapter {
+    private class ViewStateAdapter extends FragmentStateAdapter {
 
         public ViewStateAdapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);
@@ -101,7 +101,7 @@ public class ThirdActivity extends AppCompatActivity {
         }
     }
 
-    public class ViewPagerAdapter extends FragmentPagerAdapter {
+    private class ViewPagerAdapter extends FragmentPagerAdapter {
 
         public ViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
