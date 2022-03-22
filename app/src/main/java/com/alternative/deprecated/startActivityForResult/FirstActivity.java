@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alternative.deprecated.Constant;
 import com.alternative.deprecated.R;
 
 public class FirstActivity extends AppCompatActivity {
@@ -57,7 +58,7 @@ public class FirstActivity extends AppCompatActivity {
         findViewById(R.id.btNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSomeActivityForResult(true);
+                openSomeActivityForResult();
             }
         });
 
@@ -69,12 +70,12 @@ public class FirstActivity extends AppCompatActivity {
         });
     }
 
-    public void openSomeActivityForResult(boolean isNew) {
+    public void openSomeActivityForResult() {
         Intent intent = new Intent(this, SecondActivity.class);
-        if (isNew) {
-            someActivityResultLauncher.launch(intent);
-        } else {
+        if (Constant.showDeprecated) {
             startActivityForResult(intent, 123);
+        } else {
+            someActivityResultLauncher.launch(intent);
         }
     }
 
