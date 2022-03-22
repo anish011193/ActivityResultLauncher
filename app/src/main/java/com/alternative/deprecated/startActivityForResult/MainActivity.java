@@ -1,4 +1,4 @@
-package com.alternative.deprecated;
+package com.alternative.deprecated.startActivityForResult;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.alternative.deprecated.R;
 
 public class MainActivity extends AppCompatActivity {
 

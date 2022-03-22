@@ -1,4 +1,4 @@
-package com.alternative.deprecated;
+package com.alternative.deprecated.startActivityForResult;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.alternative.deprecated.R;
 
 public class SomeActivity extends AppCompatActivity {
     private EditText editText;

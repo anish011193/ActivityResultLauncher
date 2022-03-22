@@ -1,4 +1,4 @@
-package com.alternative.deprecated;
+package com.alternative.deprecated.startActivityForResult;
 
 import android.content.Intent;
 import androidx.activity.result.ActivityResult;
