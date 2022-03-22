@@ -44,8 +44,11 @@ public class ThirdActivity extends AppCompatActivity {
 
             viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
             viewPager.setAdapter(viewPagerAdapter);
+            viewPager.setOffscreenPageLimit(2);
             viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
+            for(String str: titles){
+                tabLayout.addTab(tabLayout.newTab().setText(str));
+            }
             tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
@@ -68,7 +71,7 @@ public class ThirdActivity extends AppCompatActivity {
             viewPager.setVisibility(View.GONE);
             viewStateAdapter = new ViewStateAdapter(this);
             viewPager2.setAdapter(viewStateAdapter);
-            new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position])));
+            new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
         }
 
     }
