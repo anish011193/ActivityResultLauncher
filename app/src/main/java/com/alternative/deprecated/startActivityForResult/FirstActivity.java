@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.alternative.deprecated.R;
 
-public class MainActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity {
 
     //UI Init
     private TextView textView;
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setTitle("Main Activity");
+        setContentView(R.layout.activity_firstactivity);
+        setTitle("First Activity");
         textView = findViewById(R.id.txtView1);
         imageView = findViewById(R.id.imgGallery);
 
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSomeActivityForResult(boolean isNew) {
-        Intent intent = new Intent(this, SomeActivity.class);
+        Intent intent = new Intent(this, SecondActivity.class);
         if (isNew) {
             someActivityResultLauncher.launch(intent);
         } else {
@@ -82,13 +82,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK && requestCode == 123) {
-            if (data != null && data.getStringExtra(SomeActivity.KEY_NAME) != null)
+            if (data != null && data.getStringExtra(SecondActivity.KEY_NAME) != null)
                 doSomeOperations(data);
         }
     }
 
     private void doSomeOperations(Intent data) {
-        textView.setText(data.getStringExtra(SomeActivity.KEY_NAME));
+        textView.setText(data.getStringExtra(SecondActivity.KEY_NAME));
     }
 
 }

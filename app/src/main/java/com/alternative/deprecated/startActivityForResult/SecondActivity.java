@@ -10,15 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.alternative.deprecated.R;
 
-public class SomeActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
     private EditText editText;
     public static final String KEY_NAME = "NAME";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_someactivity);
-        setTitle("Some Activity");
+        setContentView(R.layout.activity_secondactivity);
+        setTitle("Second Activity");
 
         editText = findViewById(R.id.etText1);
 

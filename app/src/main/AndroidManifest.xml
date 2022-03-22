@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ActivityResultLauncher">
 
         <activity
-            android:name="com.alternative.deprecated.startActivityForResult.MainActivity"
+            android:name="com.alternative.deprecated.startActivityForResult.FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.alternative.deprecated.startActivityForResult.SomeActivity"
+        <activity android:name="com.alternative.deprecated.startActivityForResult.SecondActivity"
             android:exported="true"/>
     </application>
 
