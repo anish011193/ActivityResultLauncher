@@ -71,6 +71,13 @@ public class ThirdActivity extends AppCompatActivity {
             viewPager.setVisibility(View.GONE);
             viewStateAdapter = new ViewStateAdapter(this);
             viewPager2.setAdapter(viewStateAdapter);
+//            TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
+//                @Override
+//                public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+//                    tab.setText(titles[position]);
+//                }
+//            });
+//            tabLayoutMediator.attach();
             new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
         }
 
